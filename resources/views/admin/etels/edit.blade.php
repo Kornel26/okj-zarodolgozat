@@ -10,6 +10,13 @@
         </div>
 
         <div class="card-body">
+            @if($errors->any())
+                <ul class="alert alert-danger">
+                    @foreach ($errors->all() as $error)
+                        <li><strong>{{ $error }}</strong></li>
+                    @endforeach
+                </ul>
+            @endif
             <form action="{{route('admin.etels.update', $etel)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 {{method_field('PUT')}}

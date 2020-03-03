@@ -10,12 +10,19 @@
         </div>
 
         <div class="card-body">
+            @if($errors->any())
+                <ul class="alert alert-danger">
+                    @foreach ($errors->all() as $error)
+                        <li><strong>{{ $error }}</strong></li>
+                    @endforeach
+                </ul>
+            @endif
             <form action="{{route('admin.roles.store')}}" method="POST">
                 @csrf
                 <div class="form-group row">
                     <label for="name" class="col-md-2 col-form-label text-md-right">Név</label>
                     <div class="col-md-6">
-                        <input id="name" type="text" class="form-control" name="name" required autofocus>
+                        <input id="name" type="text" class="form-control" name="name" autofocus>
                     </div>
                 </div>
 

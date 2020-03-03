@@ -85,18 +85,19 @@ class UsersController extends Controller
     {
         $user->roles()->sync($request->roles);
 
-        $user->vezeteknev = $request->vezeteknev;
-        $user->keresztnev = $request->keresztnev;
-        $user->email = $request->email;
-        $user->telefonszam = $request->telefonszam;
-        $user->iranyitoszam = $request->iranyitoszam;
-        $user->telepules = $request->telepules;
-        $user->utca = $request->utca;
-        $user->hazszam = $request->hazszam;
-        $user->egyeb = $request->egyeb;
-        $user->email = $request->email;
+        $data = request()->validate([
+            'vezeteknev'=>'required|max:15',
+            'keresztnev'=>'required|max:15',
+            'email'=>'required|max:50',
+            'telefonszam'=>'sometimes|max:15',
+            'iranyitoszam'=>'sometimes|max:4',
+            'telepules'=>'sometimes|max:30',
+            'utca'=>'sometimes|max:20',
+            'hazszam'=>'sometimes|max:5',
+            'egyeb'=>'sometimes|max:20',
+        ]);
 
-        $user->save();
+        $user->update($data);
 
         return redirect()->route('admin.users.index');
     }

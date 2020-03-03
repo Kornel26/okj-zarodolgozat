@@ -43,7 +43,16 @@ class RolesController extends Controller
      */
     public function store(Request $request)
     {
-        Role::create(request(['name']));
+        Role::create(request()->validate([
+            'name' => 'required|min:3|max:20'
+        ]));
+
+        /*,
+        [
+            'name.required'=>'A név mező kitöltése kötelező.',
+            'name.min'=>'A név legalább 3 karakter hosszú legyen.',
+            'name.max'=>'A név legfeljebb 20 karakter hosszú lehet.',
+        ]*/
 
         return $this->index();
     }
