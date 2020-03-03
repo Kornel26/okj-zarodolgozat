@@ -10,7 +10,7 @@
         </div>
 
         <div class="card-body">
-            <form action="{{route('admin.etels.store')}}" method="POST">
+            <form action="{{route('admin.etels.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
 
                 <div class="form-group row">
@@ -28,13 +28,6 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="kep" class="col-md-2 col-form-label text-md-right">Kép</label>
-                    <div class="col-md-6">
-                        <input id="kep" type="text" class="form-control" name="kep">
-                    </div>
-                </div>
-
-                <div class="form-group row">
                     <label for="kategoria" class="col-md-2 col-form-label text-md-right">Kategória</label>
                     <div class="col-md-6">
                         <input id="kategoria" type="text" class="form-control" name="kategoria" required>
@@ -46,6 +39,11 @@
                     <div class="col-md-6">
                         <input id="feltetek" type="text" class="form-control" name="feltetek">
                     </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="kep" class="col-md-2 col-form-label text-md-right">Kép</label>
+                    <input type="file" name="kep">
                 </div>
 
                 <button class="btn btn-primary" type="submit">Felvétel</button>

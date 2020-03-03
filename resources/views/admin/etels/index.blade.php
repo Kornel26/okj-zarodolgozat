@@ -6,7 +6,7 @@
     <div class="card">
         <div class="card-header">
             <h2>Ételek</h2>
-            <a class="btn btn-primary" href="{{route('admin.')}}">Új étel felvétele</a>
+            <a class="btn btn-primary" href="{{route('admin.etels.create')}}">Új étel felvétele</a>
                 <div class="col-md-4" style="display: inline-block;">
                     <form action="{{route('admin.etels.search')}}" method="get">
                         <div class="input-group">
@@ -29,6 +29,7 @@
                 <th>Ár</th>
                 <th>Kategória</th>
                 <th>Feltétek</th>
+                <th>Kép</th>
                 <th>Funkciók</th>
                 </thead>
                 <tbody>
@@ -39,6 +40,7 @@
                         <td>{{$etel->ar}}</td>
                         <td>{{$etel->kategoria}}</td>
                         <td>{{$etel->feltetek}}</td>
+                        <td>{{$etel->kep}}</td>
                         <td>
                             <a href="{{route('admin.etels.edit', $etel->id)}}"><button class="btn btn-warning float-left" type="button">Módosítás</button></a>
                             <form action="{{route('admin.etels.destroy', $etel)}}" method="POST">

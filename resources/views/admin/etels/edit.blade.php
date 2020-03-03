@@ -10,7 +10,7 @@
         </div>
 
         <div class="card-body">
-            <form action="{{route('admin.etels.update', $etel)}}" method="POST">
+            <form action="{{route('admin.etels.update', $etel)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 {{method_field('PUT')}}
 
@@ -29,13 +29,6 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="kep" class="col-md-2 col-form-label text-md-right">Kép</label>
-                    <div class="col-md-6">
-                        <input id="kep" type="text" class="form-control" name="kep" value="{{$etel->kep}}">
-                    </div>
-                </div>
-
-                <div class="form-group row">
                     <label for="kategoria" class="col-md-2 col-form-label text-md-right">Kategória</label>
                     <div class="col-md-6">
                         <input id="kategoria" type="text" class="form-control" name="kategoria" value="{{$etel->kategoria}}" required>
@@ -47,6 +40,11 @@
                     <div class="col-md-6">
                         <input id="feltetek" type="text" class="form-control" name="feltetek"value="{{$etel->feltetek}}">
                     </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="kep" class="col-md-2 col-form-label text-md-right">Kép</label>
+                    <input type="file" name="kep" value="{{$etel->kep}}">
                 </div>
 
                 <button class="btn btn-warning" type="submit">Módosítás</button>

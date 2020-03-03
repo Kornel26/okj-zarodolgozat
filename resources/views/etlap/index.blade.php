@@ -23,8 +23,12 @@
 
             <div class="card-body">
                 @forelse($etels as $etel)
-                    <div class="card" style="width: 15rem; height: 15rem; margin: 10px; display: inline-grid;">
-                        <img class="card-img-top" src="{{$etel->kep}}" alt="{{$etel->nev}}"/>
+                    <div class="card" style="width: 15rem; margin: 10px; display: inline-grid;">
+                        @if($etel->kep)
+                            <img class="" style="width: 13rem; height: 13rem; margin: auto; padding-top: 1rem;" src="{{asset('storage/'.$etel->kep)}}" alt="{{$etel->nev}}" title="{{$etel->nev}}"/>
+                        @else
+                            <img class="" style="width: 13rem; height: 13rem; margin: auto; padding-top: 1rem;" src="{{asset('storage/kepek/not_found.png')}}" alt="A kép nem megjeleníthető" title="A kép nem megjeleníthető"/>
+                        @endif
                         <div class="card-body">
                             <h5 class="card-title">{{$etel->nev}}</h5>
                             <p class="card-text">{{$etel->feltetek}}</p>

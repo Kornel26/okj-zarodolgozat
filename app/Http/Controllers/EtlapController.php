@@ -44,6 +44,6 @@ class EtlapController extends Controller
                 break;
         }
 
-        return view('etlap.index', compact('etels', 'kategoria')); //['etels'=>$etels, 'kategoria'=>$kategoria] //->with('etels', $etels)
+        return view('etlap.index', compact('etels', 'kategoria'));
     }
 }

@@ -105,6 +105,10 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
     </include_path>
   </component>
   <component name="ProjectId" id="1YFyGOzo1jA8Y3Lf1l6vvZ05n73" />
@@ -157,7 +161,7 @@
       <workItem from="1583083525398" duration="741000" />
       <workItem from="1583131196950" duration="4547000" />
       <workItem from="1583168820642" duration="3382000" />
-      <workItem from="1583255189121" duration="439000" />
+      <workItem from="1583255189121" duration="8514000" />
     </task>
     <servers />
   </component>
@@ -165,10 +169,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="732" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582970840409">
+    <state x="732" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583264135232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="732" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1582970840409" />
+    <state x="732" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583264135232" />
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1582909938417">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

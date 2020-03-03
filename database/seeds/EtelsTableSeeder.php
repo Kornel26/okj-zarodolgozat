@@ -17,420 +17,420 @@ class EtelsTableSeeder extends Seeder
         Etel::create([
             'nev' => 'coca-cola',
             'ar' => 300,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'udito'
         ]);
         Etel::create([
             'nev' => 'bolognai',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'teszta'
         ]);
         Etel::create([
             'nev' => 'finom fagyi',
             'ar' => 300,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'desszert'
         ]);
         Etel::create([
             'nev' => 'finomabb fagyi',
             'ar' => 500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'desszert'
         ]);
         Etel::create([
             'nev' => 'saláta',
             'ar' => 1000,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'salata'
         ]);
         Etel::create([
             'nev' => 'steak',
             'ar' => 5000,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'foetel'
         ]);
         Etel::create([
             'nev' => 'hamburger',
             'ar' => 800,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'hamburger'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
         Etel::create([
             'nev' => 'teszt',
             'ar' => 1500,
-            'kep' => "#",
+            'kep' => "",
             'kategoria' => 'pizza',
             'feltetek' => 'paradicsomos alap'
         ]);
