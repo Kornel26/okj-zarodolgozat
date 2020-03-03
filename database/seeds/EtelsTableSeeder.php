@@ -15,25 +15,46 @@ class EtelsTableSeeder extends Seeder
         Etel::truncate();
 
         Etel::create([
-            'nev' => 'teszt',
-            'ar' => 1500,
+            'nev' => 'coca-cola',
+            'ar' => 300,
             'kep' => "#",
-            'kategoria' => 'pizza',
-            'feltetek' => 'paradicsomos alap'
+            'kategoria' => 'udito'
         ]);
         Etel::create([
-            'nev' => 'teszt',
+            'nev' => 'bolognai',
             'ar' => 1500,
             'kep' => "#",
-            'kategoria' => 'pizza',
-            'feltetek' => 'paradicsomos alap'
+            'kategoria' => 'teszta'
         ]);
         Etel::create([
-            'nev' => 'teszt',
-            'ar' => 1500,
+            'nev' => 'finom fagyi',
+            'ar' => 300,
             'kep' => "#",
-            'kategoria' => 'pizza',
-            'feltetek' => 'paradicsomos alap'
+            'kategoria' => 'desszert'
+        ]);
+        Etel::create([
+            'nev' => 'finomabb fagyi',
+            'ar' => 500,
+            'kep' => "#",
+            'kategoria' => 'desszert'
+        ]);
+        Etel::create([
+            'nev' => 'saláta',
+            'ar' => 1000,
+            'kep' => "#",
+            'kategoria' => 'salata'
+        ]);
+        Etel::create([
+            'nev' => 'steak',
+            'ar' => 5000,
+            'kep' => "#",
+            'kategoria' => 'foetel'
+        ]);
+        Etel::create([
+            'nev' => 'hamburger',
+            'ar' => 800,
+            'kep' => "#",
+            'kategoria' => 'hamburger'
         ]);
         Etel::create([
             'nev' => 'teszt',
