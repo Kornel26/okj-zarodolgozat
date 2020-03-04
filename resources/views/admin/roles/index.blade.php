@@ -13,8 +13,8 @@
         <div>
             <table class="table table-striped table-bordered">
                 <thead>
-                <th>Azonosító</th>
-                <th>Név</th>
+                <th>@sortablelink('id','Azonosító')</th>
+                <th>@sortablelink('name','Név')</th>
                 <th>Funkciók</th>
                 </thead>
                 <tbody>

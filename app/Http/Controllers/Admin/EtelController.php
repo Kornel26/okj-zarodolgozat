@@ -21,8 +21,9 @@ class EtelController extends Controller
      */
     public function index()
     {
-        $etels = Etel::all();
-        return view('admin.etels.index')->with('etels', $etels);
+        //echo "<script>alert('index');</script>";
+        $etels = Etel::sortable()->get();
+        return view('admin.etels.index', compact('etels'));
     }
 
     /*
@@ -32,6 +33,7 @@ class EtelController extends Controller
      */
     public function create()
     {
+        //echo "<script>alert('create');</script>";
         return view('admin.etels.create');
     }
 
@@ -43,6 +45,7 @@ class EtelController extends Controller
      */
     public function store(Request $request)
     {
+        //echo "<script>alert('store');</script>";
         $etel = Etel::create($this->validateRequest());
 
         $this->storeImage($etel);
@@ -52,22 +55,19 @@ class EtelController extends Controller
 
     private function validateRequest()
     {
-        return tap(request()->validate([
+        //echo "<script>alert('validateRequest');</script>";
+        return request()->validate([
             'nev' => 'required|max:30',
             'ar' => 'required',
             'kategoria' => 'required|max:20',
             'feltetek' => 'max:255',
-        ]), function () {
-            if (request()->hasFile('kep')) {
-                request()->validate([
-                    'kep' => 'file|image|max:5000'
-                ]);
-            }
-        });
+            'kep' => 'file|image|max:5000'
+        ]);
     }
 
     private function storeImage($etel)
     {
+        //echo "<script>alert('storeImage');</script>";
         if (request()->has('kep')) {
             $etel->update([
                 'kep' => request()->kep->store('kepek', 'public')
@@ -128,8 +128,14 @@ class EtelController extends Controller
     public function search(Request $request)
     {
         $search = $request->get('search');
-        $etels = Etel::where('nev', 'LIKE', '%' . $search . '%')->get();
+        $column = $request->get('column');
+        $type = $request->get('type');
 
-        return view('admin.etels.index')->with(['etels' => $etels]);
+        if($type == 'reszleges')
+            $etels = Etel::where($column, 'LIKE', '%' . $search . '%')->get();
+        else if($type == 'teljes')
+            $etels = Etel::where($column, $search)->get();
+
+        return view('admin.etels.index', compact('etels'));
     }
 }

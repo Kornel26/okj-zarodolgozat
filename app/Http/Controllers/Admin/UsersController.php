@@ -22,8 +22,8 @@ class UsersController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view('admin.users.index')->with('users', $users);
+        $users = User::sortable()->get();
+        return view('admin.users.index', compact('users'));
     }
 
     /*
@@ -113,5 +113,19 @@ class UsersController extends Controller
         $user->roles()->detach();
         $user->delete();
         return redirect()->route('admin.users.index');
+    }
+
+    public function search(Request $request)
+    {
+        $search = $request->get('search');
+        $column = $request->get('column');
+        $type = $request->get('type');
+
+        if($type == 'reszleges')
+            $users = User::where($column, 'LIKE', '%' . $search . '%')->get();
+        else if($type == 'teljes')
+            $users = User::where($column, $search)->get();
+
+        return view('admin.users.index', compact('users'));
     }
 }

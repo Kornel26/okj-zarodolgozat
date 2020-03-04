@@ -21,7 +21,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('can:admi
     Route::resource('/users', 'UsersController');
     Route::resource('/roles', 'RolesController');
     Route::resource('/etels', 'EtelController');
-    Route::get('/search', 'EtelController@search')->name('etels.search');
+    Route::get('search/etels', 'EtelController@search')->name('etels.search');
+    Route::get('search/users', 'UsersController@search')->name('users.search');
 
     Route::get('/dashboard', 'DashboardController@index');
 });
