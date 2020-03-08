@@ -31,3 +31,10 @@ Route::get('/etlap', 'EtlapController@index')->name('etlap.index');
 Route::get('/etlap/{kategoria}', 'EtlapController@show')->name('etlap.show');
 
 Route::get('/profile', 'ProfileController@index')->name('profile.index');
+
+Route::resource('/kosar', 'KosarController');
+Route::post('/kosar/add', 'KosarController@add')->name('kosar.add');
+Route::post('/kosar/empty', 'KosarController@empty')->name('kosar.empty');
+Route::post('/kosar/delete', 'KosarController@delete')->name('kosar.delete');
+Route::post('/kosar/numInc', 'KosarController@numInc')->name('kosar.numInc');
+Route::post('/kosar/numDesc', 'KosarController@numDesc')->name('kosar.numDesc');

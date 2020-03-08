@@ -135,11 +135,19 @@
       <recent name="D:\xampp\htdocs\ZARODOLGOZAT\02_24\app\Http\Controllers\Admin" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="PHP Script.KosarController.php">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="KosarController.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/app/Http/Controllers/KosarController.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.KosarController.php" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -165,7 +173,11 @@
       <workItem from="1583131196950" duration="4547000" />
       <workItem from="1583168820642" duration="3382000" />
       <workItem from="1583255189121" duration="14804000" />
-      <workItem from="1583332310394" duration="12323000" />
+      <workItem from="1583332310394" duration="12429000" />
+      <workItem from="1583510055171" duration="9087000" />
+      <workItem from="1583576302495" duration="14734000" />
+      <workItem from="1583608147022" duration="3586000" />
+      <workItem from="1583653671751" duration="26021000" />
     </task>
     <servers />
   </component>
@@ -173,6 +185,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="679" y="208" key="#KosarController.php" timestamp="1583689557661">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="679" y="208" key="#KosarController.php/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583689557661" />
+    <state x="552" y="178" key="#Notifications" timestamp="1583513799794">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="178" key="#Notifications/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583513799794" />
     <state x="732" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583264135232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -181,14 +201,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583342740523" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1583267083486">
+    <state x="644" y="175" width="645" height="690" key="#phpunit.xml" timestamp="1583689531862">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583267083486" />
-    <state x="461" y="162" key="SettingsEditor" timestamp="1583267086648">
+    <state x="644" y="175" width="645" height="690" key="#phpunit.xml/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583689531862" />
+    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1583510532377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583267086648" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583510532377" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1583513792540">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583513792540" />
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1583333490507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

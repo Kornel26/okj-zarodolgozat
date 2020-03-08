@@ -10,7 +10,7 @@
     <title>ZD Pizzéria - @yield('title')</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
 </head>
 <body>
 <div id="app">
@@ -39,7 +40,24 @@
                 </ul>
 
                 <!-- Right Side Of Navbar -->
-                <ul class="navbar-nav ml-auto">
+                @can('admin')
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropleft">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Adminisztráció <span class="caret"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{route('admin.')}}">Irányítópult</a>
+                                <a class="dropdown-item" href="{{route('admin.users.index')}}">Felhasználók</a>
+                                <a class="dropdown-item" href="{{route('admin.etels.index')}}">Ételek</a>
+                                <a class="dropdown-item" href="{{route('admin.roles.index')}}">Szerepek</a>
+                            </div>
+                        </li>
+                    </ul>
+                @endcan
+
+                <ul class="navbar-nav">
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
@@ -61,10 +79,6 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
                                 <a class="dropdown-item" href="{{route('profile.index')}}">Profil</a>
-
-                                @can('admin')
-                                    <a class="dropdown-item" href="{{route('admin.')}}">Adminisztráció</a>
-                                @endcan
 
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                    onclick="event.preventDefault();
@@ -88,7 +102,7 @@
         <nav class="justify-content-center navbar navbar-light bg-white shadow-sm" style="width: max-content;">
             <a class="nav-link" href="/">Főoldal</a>
             <a class="nav-link" href="{{route('etlap.index')}}">Étlap</a>
-            <a class="nav-link" href="#">Kosár</a>
+            <a class="nav-link" href="{{route('kosar.index')}}">Kosár (<?php if(session()->get('kosar') == null) echo 0; else echo count(session()->get('kosar')); ?>)</a>
         </nav>
     </div>
 
@@ -97,10 +111,6 @@
             @yield('content')
         </div>
     </main>
-
-    <div class="card-footer text-center fixed-bottom">
-        Footer
-    </div>
 
 </div>
 </body>

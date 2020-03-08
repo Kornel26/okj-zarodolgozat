@@ -12,9 +12,11 @@
                     </div>
 
                     <div class="card-body">
-                        <div><a class="btn btn-primary" href="{{route('admin.users.index')}}">Felhasználók</a></div><br>
-                        <div><a class="btn btn-primary" href="{{route('admin.etels.index')}}">Ételek</a></div><br>
-                        <div><a class="btn btn-primary" href="{{route('admin.roles.index')}}">Szerepek</a></div><br>
+                        <div>
+                            <div class="d-inline"><a class="btn btn-primary btn-lg" href="{{route('admin.users.index')}}">Felhasználók</a></div>
+                            <div class="d-inline"><a class="btn btn-primary btn-lg" href="{{route('admin.etels.index')}}">Ételek</a></div>
+                            <div class="d-inline"><a class="btn btn-primary btn-lg" href="{{route('admin.roles.index')}}">Szerepek</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
