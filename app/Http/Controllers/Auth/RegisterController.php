@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Mail\WelcomeMail;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use App\Role;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -42,7 +44,7 @@ class RegisterController extends Controller
         $this->middleware('guest');
     }
 
-    /**
+    /*
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
@@ -51,8 +53,8 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'vezeteknev' => ['required', 'string', 'max:15'],
-            'keresztnev' => ['required', 'string', 'max:15'],
+            'vezeteknev' => ['required', 'string', 'min:3', 'max:15'],
+            'keresztnev' => ['required', 'string', 'min:3', 'max:15'],
             'email' => ['required', 'string', 'email', 'max:50', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
             'telefonszam' => ['string', 'max:15', 'nullable'],
@@ -88,6 +90,8 @@ class RegisterController extends Controller
         $role = Role::select('id')->where('name', 'user')->first();
 
         $user->roles()->attach($role);
+
+        Mail::to($user->email)->send(new WelcomeMail($user));
 
         return $user;
     }

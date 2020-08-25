@@ -37,7 +37,16 @@
                 <div class="form-group row">
                     <label for="kategoria" class="col-md-2 col-form-label text-md-right">Kategória</label>
                     <div class="col-md-6">
-                        <input id="kategoria" type="text" class="form-control" name="kategoria" required>
+                        <select id="kategoria" name="kategoria">
+                            <option value="" disabled selected>Válassz kategóriát</option>
+                            <option value="foetel">Főétel</option>
+                            <option value="teszta">Tészta</option>
+                            <option value="pizza">Pizza</option>
+                            <option value="hamburger">Hamburger</option>
+                            <option value="salata">Saláta</option>
+                            <option value="desszert">Desszert</option>
+                            <option value="udito">Üdítő, ital</option>
+                        </select>
                     </div>
                 </div>
 

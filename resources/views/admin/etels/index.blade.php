@@ -66,7 +66,7 @@
                         </td>
                     </tr>
                 @empty
-                    <tr><h1>Nincsenek ételek az adatbázisban!</h1></tr>
+                    <td colspan="7"><h1>Nincsenek ételek az adatbázisban vagy a keresés nem volt megfelelő!</h1></td>
                 @endforelse
                 </tbody>
             </table>

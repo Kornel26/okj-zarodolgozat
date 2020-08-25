@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Etel;
+use Illuminate\Support\Facades\Auth;
 
 class KosarController extends Controller
 {
@@ -14,7 +15,8 @@ class KosarController extends Controller
      */
     public function index()
     {
-        return view('kosar.index');
+        $user = Auth::User();
+        return view('kosar.index', compact('user', $user));
     }
 
     public function add(Request $request)
@@ -64,16 +66,13 @@ class KosarController extends Controller
 
     public function delete(Request $request)
     {
-        $tmp = $request->session()->get('kosar');
-        $id = $request->id;
-        $kosar = array();
-        foreach ($tmp as $i) {
-            if ($i[0] != $id) {
-                $kosar += [$i[0] => $i];
-            }
-        }
-        $request->session()->forget('kosar');
-        $request->session()->put('kosar', $kosar);
+        $kosar = $request->session()->get('kosar');
+        unset($kosar[$request->id]);
+
+        if(count($kosar) > 0)
+            $request->session()->put('kosar', $kosar);
+        else
+            $request->session()->forget('kosar');
 
         return redirect()->route('kosar.index');
     }

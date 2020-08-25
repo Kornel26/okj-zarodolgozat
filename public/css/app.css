@@ -7,11 +7,45 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
-/* SAJÁT STÍLUSOK*/
+/* ======== SAJÁT STÍLUSOK ======== */
 
+/* etlap\index */
+.etlap_img {
+    min-height: 150px;
+    max-height: 150px;
+}
+.etlap_form{
+    height: 500px;
+}
 
+/* profile\index */
+.profile_divs{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
-/* SAJÁT VÉGE */
+/* fooldal\index */
+.parallax {
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text{
+    height: 500px;
+    text-align: center;
+    display: table;
+}
+.vertical{
+    display: table-cell;
+    vertical-align: middle;
+}
+#app{
+    background-color: rgb(250, 243, 234);
+}
+
+/* ======== SAJÁT VÉGE ======== */
 
 :root {
   --blue: #3490dc;
@@ -55,6 +89,7 @@ html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: rgb(250, 243, 234);
 }
 
 article,
@@ -98,7 +133,7 @@ h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
 }
 
 p {
@@ -390,7 +425,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0px;
   font-weight: 500;
   line-height: 1.2;
 }

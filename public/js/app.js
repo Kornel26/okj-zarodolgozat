@@ -1,3 +1,166 @@
+/* Regisztráció validáció*/
+function $$(elementId){
+    return document.getElementById(elementId);
+}
+function vLenght(length, min, string){
+    //min->(bool) true->min, false->max
+    if(min){
+        return string.length < length;
+    }
+    else if(!min){
+        return string.length > length;
+    }
+}
+function vPhoneNum(string){
+    var regex = /((?:\+?3|0)6)(?:-|\()?(\d{1,2})(?:-|\))?(\d{3})-?(\d{3,4})/g;
+    return regex.test(string);
+}
+function vVezeteknev(){
+    var string = $$('vezeteknev').value;
+    var min = vLenght(3, true, string);
+    var max = vLenght(15, false, string);
+    if(min) {
+       $$('vezeteknevError').innerText = "✗ A vezetéknévnek legalább 3 karakter hosszúnak kell lennie!";
+        $$('vezeteknevError').style.color = "red";
+    }
+    if(max) {
+        $$('vezeteknevError').innerText = "✗ A vezetéknévnek legfeljebb 15 karakter hosszú lehet!";
+        $$('vezeteknevError').style.color = "red";
+    }
+    if(!min && !max) {
+        $$('vezeteknevError').innerText = "✓";
+        $$('vezeteknevError').style.color = "green";
+    }
+}
+function vKeresztnev(){
+    var string = $$('keresztnev').value;
+    var min = vLenght(3, true, string);
+    var max = vLenght(15, false, string);
+    if(min) {
+        $$('keresztnevError').innerText = "✗ A keresztnévnek legalább 3 karakter hosszúnak kell lennie!";
+        $$('keresztnevError').style.color = "red";
+    }
+    if(max) {
+        $$('keresztnevError').innerText = "✗ A keresztnévnek legfeljebb 15 karakter hosszú lehet!";
+        $$('keresztnevError').style.color = "red";
+    }
+    if(!min && !max) {
+        $$('keresztnevError').innerText = "✓";
+        $$('keresztnevError').style.color = "green";
+    }
+}
+function vEmail(){
+    var regex = /^[0-9a-z\.-]+@([0-9a-z-]+\.)+[a-z]{2,4}$/i;
+    var string = $$('email').value;
+    if(regex.test(string)){
+        $$('emailError').innerText = "✓";
+        $$('emailError').style.color = "green";
+    } else {
+        $$('emailError').innerText = "✗ Nem megfelelő email cím formátum vagy nem létező email cím!";
+        $$('emailError').style.color = "red";
+    }
+}
+function vJelszo(){
+    var min = vLenght(8, true, $$('password').value);
+    if(min) {
+        $$('jelszoError').innerText = "✗ A jelszónak legalább 8 karakter hosszúnak kell lennie!";
+        $$('jelszoError').style.color = "red";
+    } else {
+        $$('jelszoError').innerText = "✓";
+        $$('jelszoError').style.color = "green";
+    }
+}
+function vJelszoRe(){
+    var pw = $$('password').value;
+    var repw = $$('password-confirm').value;
+    if(pw < repw ? -1 : pw > repw){
+        $$('jelszoujraError').innerText = "✗ A jelszavak nem egyeznek!"
+        $$('jelszoujraError').style.color = "red";
+    } else {
+        $$('jelszoujraError').innerText = "✓";
+        $$('jelszoujraError').style.color = "green";
+    }
+}
+function vTelefonszam(){
+    var num = $$('telefonszam').value;
+    if(vPhoneNum(num)){
+        $$('telefonszamError').innerText = "✓";
+        $$('telefonszamError').style.color = "green";
+        $$('telefonszamHelp').innerText = "";
+        $$('telefonszamHelp').title = "";
+    } else {
+        $$('telefonszamError').innerText = "✗ A telefonszám formátuma helytelen.";
+        $$('telefonszamHelp').innerText = "? Húzd rám az egeret";
+        $$('telefonszamHelp').style.color = "blue";
+        $$('telefonszamHelp').title =
+            "Elfogadott formátumok:\n\n" +
+            "+36205555555\n" +
+            "36305555555\n" +
+            "06705555555\n";
+        $$('telefonszamError').style.color = "red";
+    }
+}
+function vIranyitoszam(){
+    var irsz = $$('iranyitoszam').value;
+    if(Number.isInteger(irsz/irsz) && irsz.length === 4){
+        $$('iranyitoszamError').innerText = "✓";
+        $$('iranyitoszamError').style.color = "green";
+    } else {
+        $$('iranyitoszamError').innerText = "✗ Az irányítószám nem létezik!";
+        $$('iranyitoszamError').style.color = "red";
+    }
+}
+function vTelepules(){
+    var string = $$('telepules').value;
+    var min = vLenght(2, true, string);
+    var max = vLenght(30, false, string);
+    if(min) {
+        $$('telepulesError').innerText = "✗ A településnek legalább 2 karakter hosszúnak kell lennie!";
+        $$('telepulesError').style.color = "red";
+    }
+    if(max) {
+        $$('telepulesError').innerText = "✗ A településnek legfeljebb 30 karakter hosszú lehet!";
+        $$('telepulesError').style.color = "red";
+    }
+    if(!min && !max){
+        $$('telepulesError').innerText = "✓";
+        $$('telepulesError').style.color = "green";
+    }
+}
+function vUtca(){
+    var string = $$('utca').value;
+    var max = vLenght(20, false, string);
+    if(max){
+        $$('utcaError').innerText = "✗ Az utca legfeljebb 20 karakter hosszú lehet!";
+        $$('utcaError').style.color = "red";
+    } else {
+        $$('utcaError').innerText = "✓";
+        $$('utcaError').style.color = "green";
+    }
+}
+function vHazszam(){
+    var string = $$('hazszam').value;
+    var max = vLenght(5, false, string);
+    if(max){
+        $$('hazszamError').innerText = "✗ A házszám legfeljebb 5 karakter hosszú lehet!";
+        $$('hazszamError').style.color = "red";
+    } else {
+        $$('hazszamError').innerText = "✓";
+        $$('hazszamError').style.color = "green";
+    }
+}
+function vEgyeb(){
+    var string = $$('egyeb').value;
+    var max = vLenght(30, false, string);
+    if(max){
+        $$('egyebError').innerText = "✗ Az emelet/ajtó/kapucsengő legfeljebb 20 karakter hosszú lehet!";
+        $$('egyebError').style.color = "red";
+    } else {
+        $$('egyebError').innerText = "✓";
+        $$('egyebError').style.color = "green";
+    }
+}
+
 /******/    (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};

@@ -128,11 +128,12 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\ZARODOLGOZAT\02_24\app\Http\Controllers" />
+      <recent name="D:\xampp\htdocs\ZARODOLGOZAT\02_24\app\Http\Controllers\Admin" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\xampp\htdocs\ZARODOLGOZAT\02_24\resources\views\admin\users" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\xampp\htdocs\ZARODOLGOZAT\02_24\app\Http\Controllers\Admin" />
     </key>
   </component>
   <component name="RunManager" selected="PHP Script.KosarController.php">
@@ -177,7 +178,59 @@
       <workItem from="1583510055171" duration="9087000" />
       <workItem from="1583576302495" duration="14734000" />
       <workItem from="1583608147022" duration="3586000" />
-      <workItem from="1583653671751" duration="26021000" />
+      <workItem from="1583653671751" duration="26055000" />
+      <workItem from="1583769826143" duration="13230000" />
+      <workItem from="1583849072283" duration="7639000" />
+      <workItem from="1583939730338" duration="17620000" />
+      <workItem from="1584087452262" duration="18520000" />
+      <workItem from="1584282399062" duration="5802000" />
+      <workItem from="1584346015091" duration="8661000" />
+      <workItem from="1584441449373" duration="19307000" />
+      <workItem from="1584527062607" duration="11146000" />
+      <workItem from="1584708518320" duration="6994000" />
+      <workItem from="1584794086744" duration="1633000" />
+      <workItem from="1584868123332" duration="15655000" />
+      <workItem from="1585156753225" duration="1734000" />
+      <workItem from="1585158577246" duration="1798000" />
+      <workItem from="1585160383572" duration="1798000" />
+      <workItem from="1585162190812" duration="1579000" />
+      <workItem from="1585314513598" duration="1797000" />
+      <workItem from="1585316319937" duration="624000" />
+      <workItem from="1585325411577" duration="601000" />
+      <workItem from="1585578408335" duration="599000" />
+      <workItem from="1585584797957" duration="278000" />
+      <workItem from="1585665110790" duration="1733000" />
+      <workItem from="1585666918529" duration="481000" />
+      <workItem from="1585725489912" duration="6000" />
+      <workItem from="1586072862224" duration="1930000" />
+      <workItem from="1586074985161" duration="1719000" />
+      <workItem from="1586079086522" duration="1428000" />
+      <workItem from="1586350748501" duration="1179000" />
+      <workItem from="1586357013604" duration="1000" />
+      <workItem from="1586769824432" duration="1267000" />
+      <workItem from="1586780091000" duration="274000" />
+      <workItem from="1586781986847" duration="1113000" />
+      <workItem from="1586784431959" duration="828000" />
+      <workItem from="1586792878577" duration="608000" />
+      <workItem from="1586796139088" duration="635000" />
+      <workItem from="1586861852468" duration="633000" />
+      <workItem from="1586952172831" duration="97000" />
+      <workItem from="1586965732851" duration="184000" />
+      <workItem from="1586966491125" duration="40000" />
+      <workItem from="1587990498390" duration="1613000" />
+      <workItem from="1587992313819" duration="909000" />
+      <workItem from="1587994408026" duration="1819000" />
+      <workItem from="1587997037603" duration="1198000" />
+      <workItem from="1587998878549" duration="653000" />
+      <workItem from="1588003922660" duration="1823000" />
+      <workItem from="1588005756062" duration="610000" />
+      <workItem from="1588007716024" duration="719000" />
+      <workItem from="1588072452681" duration="681000" />
+      <workItem from="1588075549137" duration="1832000" />
+      <workItem from="1588078120888" duration="1450000" />
+      <workItem from="1588080102631" duration="1938000" />
+      <workItem from="1588082213444" duration="1860000" />
+      <workItem from="1588084284608" duration="1173000" />
     </task>
     <servers />
   </component>
@@ -197,10 +250,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="732" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583264135232" />
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583342740523">
+    <state x="714" y="51" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1584361125601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583342740523" />
+    <state x="714" y="51" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584361125601" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1586074097207">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1586074097207" />
     <state x="644" y="175" width="645" height="690" key="#phpunit.xml" timestamp="1583689531862">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -217,5 +274,13 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1583333490507" />
+    <state x="701" y="153" key="refactoring.ChangeSignatureDialog" timestamp="1584108044877">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="701" y="153" key="refactoring.ChangeSignatureDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1584108044877" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1585159020200">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1585159020200" />
   </component>
 </project>

@@ -7,9 +7,9 @@ use Kyslik\ColumnSortable\Sortable;
 
 class Etel extends Model
 {
-    use Sortable;
-
     protected $guarded = [];
+
+    use Sortable;
     public $sortable = [
         'id',
         'nev',

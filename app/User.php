@@ -49,6 +49,11 @@ class User extends Authenticatable
         return $this->belongsToMany('App\Role');
     }
 
+    public function rendeles()
+    {
+        return $this->belongsToMany('App\Rendeles');
+    }
+
     public function hasAnyRoles($roles)
     {
         if ($this->roles()->whereIn('name', $roles)->first()) {

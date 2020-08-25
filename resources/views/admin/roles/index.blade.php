@@ -33,7 +33,7 @@
                         </td>
                     </tr>
                 @empty
-                    <tr>Nincsenek szerepek az adatbázisban</tr>
+                    <td colspan="3"><h1>Nincsenek szerepek az adatbázisban!</h1></td>
                 @endforelse
                 </tbody>
             </table>

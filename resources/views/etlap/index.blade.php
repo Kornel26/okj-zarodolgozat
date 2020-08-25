@@ -5,8 +5,8 @@
 @section('content')
     <div class="container">
         <div class="card">
-            <div class="card-header sticky-top" style="background-color: #f7f7f7;">
-                <h2>Étlap - {{$kategoria}}</h2>
+            <div class="card-header sticky-top" style="background-color: #f7f7f7; z-index: 1;">
+                <h2>{{$kategoria}}</h2>
                 <div class="text-center">
                     <a href="{{route('etlap.index')}}" class="btn btn-primary">Összes</a>
                     <a href="{{route('etlap.show', "foetel")}}" class="btn btn-primary">Főételek</a>
@@ -17,46 +17,48 @@
                     <a href="{{route('etlap.show', "desszert")}}" class="btn btn-primary">Desszertek</a>
                     <a href="{{route('etlap.show', "udito")}}" class="btn btn-primary">Üdítők, italok</a>
 
-                    <a href="#" class="btn btn-primary float-right">Vissza az oldal telejére</a>
+                    <a href="#" class="btn btn-secondary float-right">Vissza az oldal telejére</a>
                 </div>
             </div>
 
-            <div class="card-body">
+            <?php $i = 4; ?>
+            <div class="card-body <?php if ($i % 4 == 0) echo "row"; ?>">
                 @forelse($etels as $etel)
-                    <form action="{{route('kosar.add')}}" method="POST" style="display: inline-block;">
+                    <form action="{{route('kosar.add')}}" method="POST" class="col-lg-3 col-md-4 col-sm-6">
                         <input type="hidden" value="{{$etel->id}}" id="id" name="etel[]">
                         <input type="hidden" value="{{$etel->nev}}" id="nev" name="etel[]">
                         <input type="hidden" value="{{$etel->ar}}" id="ar" name="etel[]">
                         @csrf
-                        <div class="card" style="width: 15rem; margin: 10px; display: inline-flex; height: 475px;">
+                            <div class="card" style="margin: 10px;">
                             @if($etel->kep)
-                                <img class="" style="width: 13rem; height: 13rem; margin: auto; padding-top: 1rem;"
-                                     src="{{asset('storage/'.$etel->kep)}}" alt="{{$etel->nev}}"
-                                     title="{{$etel->nev}}"/>
+                                <img src="{{asset('storage/'.$etel->kep)}}" alt="{{$etel->nev}}"
+                                     title="{{$etel->nev}}" class="img-fluid etlap_img"/>
                             @else
-                                <img class="" style="width: 13rem; height: 13rem; margin: auto; padding-top: 1rem;"
-                                     src="{{asset('storage/kepek/not_found.png')}}" alt="A kép nem megjeleníthető"
-                                     title="A kép nem megjeleníthető"/>
+                                <img src="{{asset('storage/kepek/not_found.png')}}" alt="A kép nem megjeleníthető"
+                                     title="A kép nem megjeleníthető" class="img-fluid etlap_img"/>
                             @endif
                             <div class="card-body">
                                 <h5 class="card-title">{{$etel->nev}}</h5>
-                                <p class="card-text" style="height: 4em;">{{$etel->feltetek}}</p>
-                                <p>{{$etel->ar}} -Ft</p>
+                                <p class="card-text">{{$etel->feltetek}}</p>
+                                @if($etel->kategoria!="pizza")
+                                    <p>{{$etel->ar}} Ft</p>
+                                @endif
                                 <p>Mennyiség: <input type="number" name="etel[]" value="1" min="1"
-                                                     style="width:50px; margin-top: 10px;">
+                                                     style="width:50px;">
                                 </p>
-                                <div style="display: inline-block;">
-                                    <button class="btn btn-primary" type="submit">Kosárba</button>
-                                </div>
                                 @if($etel->kategoria=="pizza")
-                                    <div style="display: inline-block; margin: 0; padding: 0; float: right; margin-right:30px;">
-                                        <p style="margin: 0;"><input type="radio" id="normal" value="normal" name="etel[]" checked="checked">Normál</p>
-                                        <p style="margin: 0;"><input type="radio" id="csaladi" value="csaladi" name="etel[]">Családi</p>
+                                    <div style="display: inline-block; margin: 0; padding: 0;">
+                                        <label style="margin: 0; display: table-row;"><input type="radio" id="normal" value="normal" name="etel[]" checked="checked"> Normál (32cm)@if($etel->kategoria=="pizza")<span> {{$etel->ar}} Ft</span>@endif</label>
+                                        <label style="margin: 0; display: table-row;"> <input type="radio" id="csaladi" value="csaladi" name="etel[]"> Családi (50cm)@if($etel->kategoria=="pizza")<span> {{$etel->ar*2}} Ft</span>@endif</label>
                                     </div>
                                 @endif
+                                <div style="display: inline-block;">
+                                    <button class="btn btn-success" type="submit">Kosárba</button>
+                                </div>
                             </div>
                         </div>
                     </form>
+                    <?php $i++; ?>
                 @empty
                     <h2>Az ételek nem megjeleníthetőek.</h2>
                 @endforelse

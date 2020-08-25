@@ -24,7 +24,12 @@ class UsersTableSeeder extends Seeder
             'vezeteknev' => 'Admin',
             'keresztnev' => 'Janos',
             'email' => 'admin@admin.com',
-            'password' => Hash::make('password')
+            'password' => Hash::make('password'),
+            'telefonszam' => '06301234567',
+            'iranyitoszam' => '1234',
+            'telepules' => 'Bag',
+            'utca' => 'Szőlő utca',
+            'hazszam' => '20',
         ]);
 
         $user = User::create([

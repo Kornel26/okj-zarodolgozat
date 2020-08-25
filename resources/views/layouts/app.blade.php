@@ -11,6 +11,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -19,14 +20,22 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
+    @yield('head')
+
 </head>
 <body>
 <div id="app">
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
         <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                Záródolgozat Pizzéria
-            </a>
+                <a class="navbar-brand" href="{{ url('/') }}">
+                    <h4>Záródolgozat Pizzéria</h4>
+                </a>
+            <span class="navbar-text" style="text-align: center; width: 100%;">
+                <span><strong>Tel.:</strong> +36/70-1234567</span>
+                <span><strong>E-Mail:</strong> zdpizzeria@abc.xyz</span>
+                <span><strong>Cím:</strong> 1000 Város, Nap utca 20.</span>
+            </span>
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
@@ -42,13 +51,14 @@
                 <!-- Right Side Of Navbar -->
                 @can('admin')
                     <ul class="navbar-nav">
-                        <li class="nav-item dropleft">
+                        <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 Adminisztráció <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{route('admin.')}}">Irányítópult</a>
+                                <a class="dropdown-item" href="{{route('admin.orders.index')}}">Rendelések</a>
                                 <a class="dropdown-item" href="{{route('admin.users.index')}}">Felhasználók</a>
                                 <a class="dropdown-item" href="{{route('admin.etels.index')}}">Ételek</a>
                                 <a class="dropdown-item" href="{{route('admin.roles.index')}}">Szerepek</a>
@@ -61,11 +71,11 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('login') }}">Bejelentkezés</a>
+                            <h5><a class="nav-link" href="{{ route('login') }}">Bejelentkezés</a></h5>
                         </li>
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">Regisztráció</a>
+                                <h5><a class="nav-link" href="{{ route('register') }}">Regisztráció</a></h5>
                             </li>
                         @endif
                     @else
@@ -100,14 +110,15 @@
 
     <div class="justify-content-center d-flex">
         <nav class="justify-content-center navbar navbar-light bg-white shadow-sm" style="width: max-content;">
-            <a class="nav-link" href="/">Főoldal</a>
-            <a class="nav-link" href="{{route('etlap.index')}}">Étlap</a>
-            <a class="nav-link" href="{{route('kosar.index')}}">Kosár (<?php if(session()->get('kosar') == null) echo 0; else echo count(session()->get('kosar')); ?>)</a>
+            <h5><a class="nav-link" href="/">Főoldal</a></h5>
+            <h5><a class="nav-link" href="{{route('etlap.index')}}">Étlap</a></h5>
+            <h5><a class="nav-link" href="{{route('kosar.index')}}">Kosár (<?php if(session()->get('kosar') == null) echo 0; else echo count(session()->get('kosar')); ?>)</a></h5>
         </nav>
     </div>
 
     <main class="py-4">
         <div class="card-body">
+            @include('partials.alerts')
             @yield('content')
         </div>
     </main>

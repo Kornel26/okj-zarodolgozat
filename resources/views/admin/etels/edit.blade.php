@@ -2,6 +2,14 @@
 
 @section('title', 'Étel módosítása')
 
+@section('head')
+    <script>
+        window.onload = function () {
+            document.getElementById("{{$etel->kategoria}}").selected = "true";
+        }
+    </script>
+@endsection
+
 @section('content')
     <div class="card">
         <div class="card-header">
@@ -38,7 +46,16 @@
                 <div class="form-group row">
                     <label for="kategoria" class="col-md-2 col-form-label text-md-right">Kategória</label>
                     <div class="col-md-6">
-                        <input id="kategoria" type="text" class="form-control" name="kategoria" value="{{$etel->kategoria}}" required>
+                        <select id="kategoria" name="kategoria">
+                            <option value="" disabled selected>Válassz kategóriát</option>
+                            <option id="foetel" value="foetel">Főétel</option>
+                            <option id="teszta" value="teszta">Tészta</option>
+                            <option id="pizza" value="pizza">Pizza</option>
+                            <option id="hamburger" value="hamburger">Hamburger</option>
+                            <option id="salata" value="salata">Saláta</option>
+                            <option id="desszert" value="desszert">Desszert</option>
+                            <option id="udito" value="udito">Üdítő, ital</option>
+                        </select>
                     </div>
                 </div>
 

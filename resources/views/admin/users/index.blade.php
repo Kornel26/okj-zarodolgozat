@@ -79,7 +79,7 @@
                         </td>
                     </tr>
                 @empty
-                    <tr>Nincsenek felhasználók az adatbázisban</tr>
+                    <td colspan="12"><h1>Nincsenek felhasználók az adatbázisban vagy a keresés nem volt megfelelő!</h1></td>
                 @endforelse
                 </tbody>
             </table>

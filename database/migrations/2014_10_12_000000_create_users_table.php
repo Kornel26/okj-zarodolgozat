@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('telepules', 30)->nullable();
             $table->string('utca', 20)->nullable();
             $table->string('hazszam', 5)->nullable();
-            $table->string('egyeb', 20)->nullable();
+            $table->string('egyeb', 30)->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
